@@ -1,17 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Backoffice</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/auth.js"></script>
+  <meta charset="UTF-8">
+  <title>Backoffice — Home</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/auth.js" defer></script>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Bienvenido al Backoffice</h1>
-        <p>¡Has iniciado sesión correctamente!</p>
-        <button id="logoutBtn">Cerrar sesión</button>
+
+  <!-- NAVBAR -->
+  <nav>
+    <h1>Panel de Proyectos</h1>
+    <button onclick="auth.logout()">Cerrar sesión</button>
+  </nav>
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <section id="projectPanel">
+    <h2>Mis Proyectos</h2>
+    <button id="addProjectBtn">Agregar proyecto</button>
+
+    <!-- GRID donde se insertan las cards -->
+    <div class="project-grid" id="projectsList"></div>
+  </section>
+
+  <!-- MODAL (INVISIBLE al inicio) -->
+  <div id="projectModalBg" class="modal-bg">
+    <div class="modal">
+
+      <h2 id="projectModalTitle">Nuevo Proyecto</h2>
+
+      <!-- FORMULARIO EXACTO COMO LO USA TU auth.js -->
+      <form id="projectForm">
+
+        <!-- oculto: solo se usa para actualizar -->
+        <input type="hidden" id="projId">
+
+        <input type="text" id="projTitle" placeholder="Título" required>
+        <textarea id="projDescription" placeholder="Descripción" required></textarea>
+        <input type="text" id="projTech" placeholder="Tecnologías" required>
+        <input type="text" id="projRepo" placeholder="URL del repositorio" required>
+        
+        <!-- Por compatibilidad con tu JS -->
+        <input type="file" id="projImages" accept="image/*" multiple>
+
+        <button type="submit" id="projectSubmit" class="btn btn-submit">Guardar</button>
+        <button type="button" id="projectCancel" class="btn btn-cancel">Cancelar</button>
+      </form>
+
     </div>
+  </div>
+
 </body>
 </html>

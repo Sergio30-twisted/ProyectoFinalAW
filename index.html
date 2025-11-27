@@ -2,20 +2,29 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login | Backoffice</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script defer src="js/auth.js"></script>
+  <title>Backoffice — Login</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/auth.js" defer></script>
 </head>
 <body>
-  <div class="container">
-    <h1>Iniciar Sesión</h1>
-    <form id="loginForm">
-      <input type="text" id="username" placeholder="Usuario" required>
-      <input type="password" id="password" placeholder="Contraseña" required>
-      <button type="submit">Entrar</button>
-    </form>
-    <p>¿No tienes cuenta? <a href="register.html">Regístrate aquí</a></p>
+
+  <div class="centered-container">
+    <div class="form-card">
+      <h2>Iniciar sesión</h2>
+
+      <form onsubmit="auth.login(event)">
+        <input id="loginEmail" type="email" placeholder="Email" required>
+        <input id="loginPassword" type="password" placeholder="Contraseña" required minlength="6">
+
+        <button class="btn" type="submit">Ingresar</button>
+      </form>
+
+      <p class="bottom-text">
+        ¿No tienes cuenta?
+        <a href="register.html">Regístrate</a>
+      </p>
+    </div>
   </div>
+
 </body>
 </html>

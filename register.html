@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro | Backoffice</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/auth.js"></script>
+  <meta charset="UTF-8">
+  <title>Backoffice — Register</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/auth.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Crear Cuenta</h1>
-        <form id="registerForm">
-        <input type="text" id="newUser" placeholder="Usuario" required>
-        <input type="password" id="newPass" placeholder="Contraseña" required>
-        <button type="submit">Registrar</button>
-        </form>
-        <p>¿Ya tienes cuenta? <a href="index.html">Inicia sesión</a></p>
+
+  <div class="centered-container">
+    <div class="form-card">
+      <h2>Registro</h2>
+
+      <form onsubmit="auth.register(event)">
+        <input id="name" type="text" placeholder="Nombre (mín 6)" required minlength="6">
+        <input id="email" type="email" placeholder="Email" required>
+        <input id="itsonId" type="text" placeholder="ITSON ID (6 dígitos)" required pattern="[0-9]{6}" maxlength="6">
+        <input id="password" type="password" placeholder="Contraseña (mín 6)" required minlength="6">
+
+        <button class="btn" type="submit">Crear cuenta</button>
+      </form>
+
+      <p class="bottom-text">
+        ¿Ya tienes cuenta?
+        <a href="index.html">Inicia sesión</a>
+      </p>
     </div>
+  </div>
+
 </body>
 </html>
