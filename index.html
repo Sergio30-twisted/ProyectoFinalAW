@@ -13,8 +13,8 @@
       <h2>Iniciar sesión</h2>
 
       <form onsubmit="auth.login(event)">
-        <input id="loginEmail" type="email" placeholder="Email" required>
-        <input id="loginPassword" type="password" placeholder="Contraseña" required minlength="6">
+        <input id="loginEmail" type="email" placeholder="Email" required autocomplete="username">
+        <input id="loginPassword" type="password" placeholder="Contraseña" required minlength="6" autocomplete="password">
 
         <button class="btn" type="submit">Ingresar</button>
       </form>
