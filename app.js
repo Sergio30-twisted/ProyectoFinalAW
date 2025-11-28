@@ -1,5 +1,5 @@
 const API_BASE = "https://portfolio-api-three-black.vercel.app/api/v1";
-const ITSON_ID = "252037"; // Reemplaza por el id
+const ITSON_ID = "252037"; // Para cambiar los proyectos, modifique este ID
 
 const grid = document.getElementById("projectsGrid");
 const loader = document.getElementById("loader");

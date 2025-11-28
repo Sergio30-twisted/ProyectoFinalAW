@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PokePortafolio | Sergio</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="pokebola.png" alt="PokéPortafolio" class="brand-logo" />
+      <h1 class="brand-title">PokéPortafolio</h1>
+    </div>
+
+    <nav class="header-actions" aria-label="acciones">
+      <a class="link" href="#about">Inspiración</a>
+      <a class="link" href="#projects">Proyectos</a>
+      <a class="link" href="#contact">Interesante</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h2 class="hero-title">¡Atrapa ideas, evoluciona proyectos!</h2>
+        <p class="hero-subtitle">Un portafolio inspirado en la Pokédex para explorar proyectos y tecnologías.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Ver PokéProyectos</a>
+          <a href="#about" class="btn btn-secondary">Inspiración</a>
+        </div>
+      </div>
+      <div class="hero-device" aria-hidden="true">
+        <div class="pokedex-frame">
+          <div class="pokedex-screen glow"></div>
+          <div class="pokedex-controls">
+            <span class="light red"></span>
+            <span class="light yellow"></span>
+            <span class="light green"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section id="projects" class="section">
+      <div class="section-header">
+        <h3 class="section-title">PokéProyectos</h3>
+
+        <div class="tools">
+          <label class="sr-only" for="search">Buscar proyectos</label>
+          <input id="search" type="search" placeholder="Buscar por nombre o tecnología…" autocomplete="off" />
+          <select id="techFilter" aria-label="Filtrar por tecnología">
+            <option value="">Todas las tecnologías</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="loader" class="loader">
+        <div class="pokeball animate__animated animate__pulse"></div>
+        <span>Cargando PokéProyectos…</span>
+      </div>
+
+      <div id="msgBox" class="msg-box" role="status" aria-live="polite"></div>
+      <div id="errorBox" class="error-box" role="alert" aria-live="assertive"></div>
+
+      <div id="projectsGrid" class="pokedex-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="about" class="section">
+  <h3 class="section-title">Interesante</h3>
+  <p class="section-text">
+    Página para ver tus pokemon favoritos: <a href="https://cajunavenger.github.io/" target="_blank" rel="noopener">CajunAvenger</a>
+  </p>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <small>Pikachu Power. Sergio</small>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
