@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<<<<<<< HEAD
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PokePortafolio | Sergio</title>
@@ -88,3 +89,32 @@
   <script src="app.js" defer></script>
 </body>
 </html>
+=======
+  <meta charset="UTF-8">
+  <title>Backoffice — Login</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/auth.js" defer></script>
+</head>
+<body>
+
+  <div class="centered-container">
+    <div class="form-card">
+      <h2>Iniciar sesión</h2>
+
+      <form onsubmit="auth.login(event)">
+        <input id="loginEmail" type="email" placeholder="Email" required autocomplete="username">
+        <input id="loginPassword" type="password" placeholder="Contraseña" required minlength="6" autocomplete="password">
+
+        <button class="btn" type="submit">Ingresar</button>
+      </form>
+
+      <p class="bottom-text">
+        ¿No tienes cuenta?
+        <a href="register.html">Regístrate</a>
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
+>>>>>>> 45cb1ff7d490a64abd8d2e3597cb3c98b585d8e2
