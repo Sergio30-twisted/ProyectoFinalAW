@@ -232,7 +232,7 @@ function openProjectModal() {
   editingProjectId = null;
   document.getElementById("projectForm").reset();
   document.getElementById("projectModalTitle").textContent = "Nuevo Proyecto";
-  document.getElementById("projectCancel").style.display = "none";
+  document.getElementById("projectCancel").style.display = "inline-block";
   document.getElementById("projectModalBg").style.display = "block";
 }
 
