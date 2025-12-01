@@ -338,18 +338,95 @@ nav button:hover {
   background: #555;
 }
 
+@media (max-width: 768px) {
 
-@media (max-width: 480px) {
   nav {
+    padding: 1rem;
     flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  #projectPanel {
+    padding: 1rem;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1rem;
   }
 
   .form-card {
+    max-width: 90%;
+  }
+
+  .modal {
+    max-width: 90%;
     padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  nav {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 0.8rem;
+    text-align: center;
+  }
+
+  nav h1 {
+    font-size: 20px;
+  }
+
+  nav button {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .form-card {
+    padding: 1.2rem;
+    max-width: 100%;
+  }
+
+  .form-card input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #projectPanel {
+    padding: 1rem;
   }
 
   .project-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+  }
+
+  .proj-img {
+    max-height: 140px;
+  }
+
+  .card-btns {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .card-btns button {
+    width: 100%;
+  }
+
+  .modal {
+    padding: 1.2rem;
+    max-width: 100%;
+  }
+
+  .modal input,
+  .modal textarea {
+    font-size: 14px;
   }
 }
